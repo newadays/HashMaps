@@ -1,0 +1,47 @@
+package datastructures;
+
+import java.util.HashMap;
+import java.util.Map.Entry;
+
+public class HashMapDemo {
+	//    create a new hashmap. Static modifier was used because of the static main method
+	static HashMap <String, Boolean>myHashMap = new HashMap<>();
+
+	@SuppressWarnings("unused")
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//		Storing or loading elements
+		myHashMap.put("Gbenga", true);
+		myHashMap.put("Lathi", true);
+		myHashMap.put("James", false);
+		System.out.println(myHashMap);
+
+		//		removing elements
+		myHashMap.remove("Lathi");
+		System.out.println(myHashMap);
+		//		fetching elements
+		System.out.println(myHashMap.get("James"));
+		//		Checking keys
+		if (myHashMap.containsKey("James")) System.out.println("yes");
+		//		Checking values
+		if (myHashMap.containsValue(true)) System.out.println("yes");
+		//		loop through the myhashmap keys
+		for (String S : myHashMap.keySet()){
+
+			System.out.println(myHashMap.get(S));
+		}
+		//		loop through the myhashmap values
+		for (Boolean B : myHashMap.values()){
+
+			System.out.println(myHashMap.values());
+		}
+
+		//		loop through the myhashmap values
+		for (Entry<String, Boolean> myHashMap:myHashMap.entrySet()){
+			System.out.println(myHashMap.toString());
+		}
+
+
+	}
+
+}
